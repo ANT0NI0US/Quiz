@@ -1,0 +1,230 @@
+/* :root {
+  
+  } */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.options {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.options .head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.options .head .category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f6d6d6;
+  padding: 20px;
+  box-shadow: 0px 0px 11px 5px #ccc;
+}
+.options .head .category label {
+  font-size: 40px;
+}
+
+.options .head .category select {
+  width: 300px;
+}
+
+@media (max-width: 767px) {
+  .options .head .category select {
+    width: 145px;
+  }
+  .options .head .category p {
+    font-size: 20px;
+  }
+}
+
+.quiz {
+  padding-top: 50px;
+}
+
+.quiz .container {
+  background-color: #f6d6d6;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.quiz .container .head .text {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+@media (max-width: 767px) {
+  .quiz .container .head .text {
+    flex-direction: column;
+  }
+}
+
+.quiz .container .head .text p {
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline;
+}
+
+.quiz .container .body {
+  background-color: white;
+  padding: 20px 0;
+  margin: 15px 0;
+}
+
+.quiz .container .body h2 {
+  padding: 15px;
+  text-align: center;
+}
+
+.quiz .container .body ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #777;
+  background-color: #f6d6d6;
+  margin: 15px 15px 0;
+}
+
+.quiz .container .body ul li:not(:last-child) {
+  border-bottom: 1px solid aquamarine;
+}
+.quiz .container .body ul li {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.quiz .container .body ul li input {
+  margin-right: 10px;
+}
+
+.quiz .container .body ul li label {
+  cursor: pointer;
+}
+
+.quiz .container .body ul li input:checked + label {
+  color: #2196f3;
+}
+
+.quiz .container .foot .submit {
+  background-color: #2196f3;
+}
+
+.quiz .container .foot .submit span {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  cursor: pointer;
+}
+.quiz .container .foot .time {
+  background-color: white;
+  padding: 20px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .quiz .container .foot .time {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+}
+
+.quiz .container .foot .time .all-questions-nums {
+  display: flex;
+}
+
+.quiz .container .foot .time .all-questions-nums span {
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.quiz .container .foot .time .all-questions-nums span.num-active {
+  background-color: #2196f3;
+}
+
+.quiz .container .result {
+  background-color: white;
+  margin-top: 20px;
+  padding: 20px;
+  display: none;
+}
+
+.quiz .container .result span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.quiz .container .result span.perfect {
+  color: red;
+}
+
+.quiz .container .result span.good {
+  color: blue;
+}
+
+.quiz .container .result .bad {
+  color: yellow;
+}

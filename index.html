@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="icon" href="./imgs/logo.png" />
+    <meta name="description" content="Quiz App for HTML and CSS Knowledge" />
+    <link rel="stylesheet" href="./css/normailze.css" />
+    <link rel="stylesheet" href="./css/quiz.css" />
+    <!-- font awesome library -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Jomhuria&family=Lobster&family=Open+Sans:ital,wght@1,300&family=Work+Sans:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="options">
+      <div class="container">
+        <div class="head">
+          <div class="text">
+            <div class="category">
+              <label for="quizCategory">Quiz category:</label>
+              <select id="quizCategory" onchange="getSelectValue()">
+                <option hidden disabled selected value>
+                  -- select an option --
+                </option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz" style="display: none">
+      <div class="container">
+        <div class="head">
+          <div class="text">
+            <div class="category">
+              <p>category:</p>
+              <span class="chosen-catg"></span>
+            </div>
+            <div class="num-questions">
+              <p>questions count:</p>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="body">
+          <h2>in html can we use this way to add attributes</h2>
+          <ul></ul>
+        </div>
+        <div class="foot">
+          <div class="submit">
+            <span>submit answer</span>
+          </div>
+          <div class="time">
+            <div class="all-questions-nums"></div>
+            <div class="clock">
+              <span> </span>
+            </div>
+          </div>
+        </div>
+        <div class="result"></div>
+      </div>
+    </div>
+    <script src="./javascript/quiz.js"></script>
+  </body>
+</html>
